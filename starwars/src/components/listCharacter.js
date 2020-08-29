@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import Character from './Character'
+import {Row} from 'reactstrap'
 
 
 const ListCharacter = props=>{
 
 
-    const[characters,setCharacters] = useState();
+    const[characters,setCharacters] = useState([]);
 
     useEffect(()=>{
         axios
@@ -24,9 +25,17 @@ const ListCharacter = props=>{
 
 
     return (
-        <div>
-            <Character/>
+       <Row xs='1'>
+        <div style={{display:'flex',flexWrap:'wrap',margin:'2%',}}>
+            {characters.map(character=>{
+                return <Character character={character}/>
+            })
+            }
         </div>
+       </Row>
+       
+    
+       
     )
 }
 export default ListCharacter
