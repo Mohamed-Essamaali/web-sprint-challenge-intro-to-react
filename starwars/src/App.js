@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">The Star Wars Films</h1>
       <ListCharacter/>
     </div>
   );

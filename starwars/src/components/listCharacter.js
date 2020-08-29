@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import '../App.css'
 import axios from 'axios';
 import Character from './Character'
 import {Row} from 'reactstrap'
@@ -26,7 +27,8 @@ const ListCharacter = props=>{
 
     return (
        <Row xs='1'>
-        <div style={{display:'flex',flexWrap:'wrap',margin:'2%',}}>
+        <div className ='container' style={{display:'flex',flexWrap:'wrap',
+        margin:'2% 5% !important',width:'77% !important',padding:'5% !important'}}>
             {characters.map(character=>{
                 return <Character character={character}/>
             })
